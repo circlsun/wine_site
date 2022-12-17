@@ -1,8 +1,9 @@
-import pandas
 from collections import defaultdict
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-from get_age import get_age
+import pandas
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from get_age import get_age
+
 
 year_foundation = 1920
 
