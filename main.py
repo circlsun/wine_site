@@ -27,7 +27,7 @@ def main():
     template = env.get_template('template.html')
     rendered_page = template.render(
         winery_age=get_age(foundation_year),
-        wines=product_line,
+        products=product_line,
         )
 
     with open('index.html', 'w', encoding="utf8") as file:
