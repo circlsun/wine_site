@@ -6,7 +6,7 @@ from get_age import get_age
 
 
 def main():
-    year_foundation = 1920
+    foundation_year = 1920
 
     wines = pandas.read_excel(
         'wine3.xlsx',
@@ -26,7 +26,7 @@ def main():
 
     template = env.get_template('template.html')
     rendered_page = template.render(
-        winery_age=get_age(year_foundation),
+        winery_age=get_age(foundation_year),
         wines=product_line,
         )
 
