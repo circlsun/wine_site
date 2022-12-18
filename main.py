@@ -25,7 +25,6 @@ def main():
     )
 
     template = env.get_template('template.html')
-
     rendered_page = template.render(
         age_winery=get_age(year_foundation),
         wines=product_line,
