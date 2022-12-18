@@ -9,7 +9,7 @@ def main():
     foundation_year = 1920
 
     wines = pandas.read_excel(
-        'wine3.xlsx',
+        'template.xlsx',
         usecols=['Категория', 'Название', 'Сорт', 'Цена', 'Картинка', 'Акция'],
         na_values='None',
         keep_default_na=False
