@@ -7,7 +7,7 @@ def get_declination(year):
     if all((year % 10 == 1, year % 100 != 11)):
         return words[0]
     elif all((2 <= year % 10 <= 4,
-            any((year % 100 < 10, year % 100 >= 20)))):
+             any((year % 100 < 10, year % 100 >= 20)))):
         return words[1]
     return words[2]
 
