@@ -1,6 +1,7 @@
 from collections import defaultdict
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import pandas
+import argparse
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from get_age import get_age
 
@@ -8,8 +9,15 @@ from get_age import get_age
 def main():
     foundation_year = 1920
 
+    parser = argparse.ArgumentParser(
+        description='This script run web-market of wine')
+    parser.add_argument(
+        '-d', '--dir', default='product_line.xlsx',
+        help='Input the path to the folder with the excel-file')
+    args = parser.parse_args()
+
     wines = pandas.read_excel(
-        'product_line.xlsx',
+        args.dir,
         usecols=['Категория', 'Название', 'Сорт', 'Цена', 'Картинка', 'Акция'],
         na_values='None',
         keep_default_na=False
