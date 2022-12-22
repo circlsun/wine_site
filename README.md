@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 - путь к файлу с данными можно также дополнительно указать через аргумент `-d`:
 ```
-python3 main.py -d example/example.xlsx
+python3 main.py -d example_path/example_file.xlsx
 ```
 ## Цели проекта
 
